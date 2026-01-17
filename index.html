@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MJR Thirumana Mandabam | Marakkanam</title>
+  <style>
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:#333; line-height:1.6; }
+    header { background:#7b2c2c; color:#fff; padding:45px 20px; text-align:center; }
+    header h1 { margin:0; font-size:36px; }
+    header p { margin-top:10px; font-size:18px; }
+    nav { background:#f5f5f5; padding:12px; text-align:center; }
+    nav a { margin:0 14px; text-decoration:none; color:#7b2c2c; font-weight:bold; }
+    section { padding:40px 20px; max-width:1100px; margin:auto; }
+    h2 { color:#7b2c2c; margin-bottom:15px; }
+    .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .card { border:1px solid #ddd; padding:20px; border-radius:6px; background:#fff; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+    .gallery img { width:100%; border-radius:6px; cursor:pointer; }
+    footer { background:#333; color:#fff; text-align:center; padding:20px; }
+    .btn { display:inline-block; background:#7b2c2c; color:#fff; padding:12px 20px; border-radius:4px; text-decoration:none; margin-right:10px; }
+
+    /* Lightbox */
+    .lightbox {
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.8);
+      justify-content:center;
+      align-items:center;
+      z-index:999;
+    }
+    .lightbox img {
+      max-width:90%;
+      max-height:90%;
+      border-radius:6px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MJR Thirumana Mandabam</h1>
+  <p>திருமணங்கள் • வரவேற்புகள் • குடும்ப விழாக்கள்</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#facilities">Facilities</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Our Marriage Hall</h2>
+  <p>
+    <strong>MJR Thirumana Mandabam</strong>, located in <strong>Marakkanam</strong>, is a spacious and
+    convenient venue for weddings, receptions, engagements, and all family functions.
+    With a peaceful atmosphere and essential facilities, our mandapam is ideal for hosting
+    memorable occasions with your loved ones.
+  </p>
+  <p>
+    <strong>எங்கள் MJR திருமண மண்டபம்</strong> மரக்காணத்தில் அமைந்துள்ளது. திருமணம், வரவேற்பு,
+    நிச்சயதார்த்தம் மற்றும் குடும்ப விழாக்களுக்கு ஏற்ற வசதிகளுடன் சிறந்த இடமாகும்.
+  </p>
+</section>
+
+<section id="facilities">
+  <h2>Hall Details & Facilities</h2>
+  <div class="features">
+    <div class="card"><strong>Seating Capacity:</strong> 400 Guests</div>
+    <div class="card"><strong>Dining Capacity:</strong> 200 Guests</div>
+    <div class="card">Spacious Non-AC Hall</div>
+    <div class="card">Large Dining Area</div>
+    <div class="card">Parking Facility Available</div>
+    <div class="card">Suitable for All Family Functions</div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <p>Tap on any image to view it in full screen.</p>
+
+  <div class="gallery">
+    <img src="hall1.jpg" alt="Full Hall View" onclick="openLightbox(this.src)">
+    <img src="hall2.jpg" alt="Hall with Stage" onclick="openLightbox(this.src)">
+    <img src="hall3.jpg" alt="Decorated Stage" onclick="openLightbox(this.src)">
+    <img src="hall4.jpg" alt="Live Function" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById('lightbox').style.display = 'flex';
+    document.getElementById('lightbox-img').src = src;
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+
+<section id="map">
+  <h2>Location</h2>
+  <p>Find <strong>MJR Thirumana Mandabam, Marakkanam</strong> easily using Google Maps.</p>
+  <iframe 
+    src="https://www.google.com/maps?q=Marakkanam&output=embed" 
+    width="100%" 
+    height="350" 
+    style="border:0; border-radius:6px;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
+
+<section id="enquiry">
+  <h2>Online Enquiry</h2>
+  <p>Please fill the enquiry form below. We will contact you shortly.</p>
+
+  <!-- GOOGLE FORM INTEGRATION -->
+  <!-- STEP: Replace the src URL below with your own Google Form embed link -->
+  <iframe 
+    src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true" 
+    width="100%" 
+    height="750" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0" 
+    style="border:1px solid #ddd; border-radius:6px;">
+    Loading…
+  </iframe>
+</section>
+
+<section id="contact">
+  <h2>Contact & Booking</h2>
+  <p><strong>Address:</strong> MJR Thirumana Mandabam, Marakkanam</p>
+  <p><strong>Phone / WhatsApp:</strong> +91 63807 26147</p>
+  <a class="btn" href="tel:+916380726147">Call Now</a>
+  <a class="btn" href="https://wa.me/916380726147" target="_blank">WhatsApp Enquiry</a>
+</section>
+
+<footer>
+  <p>© 2026 MJR Thirumana Mandabam, Marakkanam. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
